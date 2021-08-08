@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VueJS</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <h2>Count: {{ counter }}</h2>
+    <!-- Cach 1 -->
+    <button v-on:click="handleClick($event, 5)">Click me</button>
+    <!-- Cach 2 -->
+    <!-- <button v-on:click="counter += 1">Click me</button> -->
+
+    <div class="box" v-on:mousemove="handleMouseMove">
+      <p>Client X: {{ clientX }}</p>
+      <p>Client y: {{ clientY }}</p>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>

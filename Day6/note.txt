@@ -1,0 +1,56 @@
+Tìm hiểu Props Down trong Vue
+  App (title, tFooter, listUser[])
+  CompHeader (title)
+  ListUser (listUser[])
+    User (user - object)
+    User (user - object)
+    ...
+  CompFooter (tFooter)
+  -> props -> Những dữ liệu từ Component cha vào Component con
+    -> Cú pháp giống thuộc tính
+      -> Sử dụng v-bind
+
+  Props Down
+    Dữ liệu từ cha truyền vào -> truyền xuống dữ liệu cho comp con sử dụng và nó sẽ tự động render lại giao diện
+    Truyền dữ liệu vào comp con, comp con chỉ được sài, không đc phép thay đổi trực tiếp
+  Event Up
+    Truyền thông điệp (truyền sự kiện) thông báo cho comp cha biết là comp con muốn thay đổi dữ liệu
+    -> Nhiệm vụ của comp cha là nhận được thông điệp và tiến hành thay đổi data
+      -> Custom Event trong Vuejs
+
+    click -> Sự kiện có sẵn trong VueJS
+    v-on:click="changeTitle"
+      'click' -> Tên của sự kiện
+      'changeTitle' -> Hàm xử lý khi sự kiện được kích hoạt (khi người dùng click)
+
+  Đối với props nếu mình không có quy định gì cả thì nó có thể truyền vào hoặc không 
+    và khi nó có thể truyền vào hoặc không thì mình cần phải định nghĩa dữ liệu mặc định cho nó
+    props:{
+      tFooter: {
+        type: String,
+        default: 'Giá trị mặc định',
+      }
+    },
+
+Tìm hiểu Event Up trong Vue Phần
+  Không đc phép thay đổi trực tiếp props từ comp cha
+  this.title = "Học lập trình front-end";
+  console.log(this.title);
+
+  -> Truyền sự kiện thông báo ra bên ngoài
+  -> Kích hoạt sự kiện 'changTitleEvent' trong CompHeader.vue
+  -> Khi kích hoạt function bên ngoài App.vue nó sẽ chạy
+  -> Khi function đó đc chạy -> thay đổi dữ liệu
+
+  App
+  ListUser -> Khong dc quyen thay doi arrListUser -> Truyen tiep Event them mot lan nua ra ngoai App
+    User -> Truyen Event thong bao ra ListUser
+    User
+    ...
+
+Sử dụng Ref trong Vue
+  Ref dung de kich hoat su kien cua phan tu nay thong qua phan tu khac
+
+Tìm hiểu Slot và bài tập ứng dụng
+  - Slot dung de truyen nhung phan tu HTML tu comp cha vao comp con
+  - Slot dung lai duoc cho nhieu phan tu con

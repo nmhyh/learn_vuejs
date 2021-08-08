@@ -1,0 +1,61 @@
+Tìm hiểu về Life Cycle
+  beforeCreate(){
+    console.log('beforeCreate', this.title, document.querySelector('.container'));
+  },
+  created(){
+    // Goi API, Call Ajax
+    console.log('created', this.title, document.querySelector('.container'));
+  },
+  beforeMount(){
+    console.log('beforeMount', this.title, document.querySelector('.container'));
+  },
+  mounted(){
+    // Noi render template (cau truc DOM)
+    // Neu muon su dung jquery -> chi truy xuat DOM dc trong mouted -> co the su dung jquery
+    console.log('mounted', this.title, document.querySelector('.container').classList);
+  },
+  beforeUpdate() {
+    console.log('beforeUpdate', this.title);
+  },
+  updated() {
+    console.log('update', this.title);
+  },
+  // Chay khi doi tuong Vue bi huy bo
+  beforeDestroy() {
+    console.log('beforeDestroy');
+  },
+  destroyed() {
+    // Destroyed cac thu vien cua ben thu 3
+    console.log('destroyed');
+  },
+Hệ thống kiến thức chương 01
+
+Chương học số 02
+
+Phân tích kĩ thuật và dữ liệu
+  isPlaying
+  score 
+  currentScore
+  dice1 - dice2
+  Lam sao de nhan dien duoc ai la nguoi dang choi??
+    -> Chi co 2 nguoi
+    -> Tao bien de luu
+    activePlayer: 1 -> Nguoi thu nhat dang choi
+    activePlayer: 2 -> Nguoi thu hai dang choi
+
+  NewGame
+    1. Show Popup
+    2. Reset Data
+    3. Xay dung Popup
+
+  Roll dice1
+    1. Random du lieu 2 con xuc xac
+    2. Kiem tra xem nguoi dung co xoay trung con so 1 khong?
+      2.1. Neu xoay trung so 1 -> Doi luot choi -> Reset diem tam thoi
+      2.2. Neu xoay ok -> Cong don vao diem tam thoi cho nguoi choi do
+
+  Hold -> lay diem 
+    1. So sanh voi diem cuoi cung lon hon hoac bang thi FinalScore??
+    2. Chua du diem -> Cong don 'DEM CHINH THUC' -> Doi luot choi
+
+Tích hợp giao diện vào Vue

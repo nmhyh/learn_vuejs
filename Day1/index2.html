@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue Mastery</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="nav-bar">
+      <div class="cart">Cart(1)</div>
+      <div class="product-display">
+        <div class="product-container">
+          <div class="product-image">
+            <img src="./image/sock_blue.jpeg" alt="" srcset="">
+          </div>
+          <div class="product-info">
+            <h3>
+              <a v-bind:href="url" v-bind:target="target">{{ title }}</a>
+            </h3>
+            <!-- <p>Còn hàng</p>
+            <p>Còn 1 ít</p>
+            <p>Hết hàng</p> -->
+            <ul>
+              <li>Thương hiệu: không thương hiệu</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet praesentium sunt mollitia
+                explicabo fuga nam magni labore accusantium facilis ratione veniam? Ducimus architecto repellendus ipsum
+                laborum cum, mollitia modi.</li>
+            </ul>
+            <p>{{ formatPrice() }}</p>
+            <div>
+            </div>
+            <button>Thêm vào giỏ hàng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>

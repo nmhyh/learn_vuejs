@@ -1,0 +1,7 @@
+Chức năng Roll Dice Phần 02
+Chức năng Hold Score
+  Sử dụng $set() để thay đổi dữ liệu của mảng
+Chức năng Final Score
+  Sử dụng ràng buộc dữ liệu 2 chiều 'v-model'
+  Type của 1 'props' có thể là mảng kiểu dữ liệu có nó có thể nằm trong dạng Number, String
+Kiểm tra Winner

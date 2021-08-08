@@ -1,0 +1,67 @@
+Giới thiệu và cài đặt Vue CLI
+  $ npm install -g vue-cli
+  $ vue init webpack NameProject
+  $ cd NameProject
+  $ npm install
+  $ npm run dev
+
+  $ npm run build 
+
+	1. Development
+    - Babel
+      -> ES6 phiên bản mới nhất của js
+
+    - Webpack -> Công cụ giúp code đóng gói mã nguồn
+    
+  2. Production
+
+Cấu trúc Project, tìm hiểu Webpack và Babel
+
+Cấu trúc Project và Cấu hình cơ bản Webpack
+
+  output: {
+    // Đổi tên thư mục sinh ra mặc định là "dist" thành "public"
+    path: path.resolve(__dirname, "./public"),
+    publicPath: "/public/",
+    // Đổi tên thư mục tương ứng
+    filename: "build.js"
+  },
+
+  {
+    test: /\.(png|jpg|gif|svg)$/,
+    // file loader dùng để quản lý hình ảnh
+    // và là công cụ để đưa hình ảnh ra môi trường production
+    loader: "file-loader",
+    // file options nơi mình định nghĩa thư mục khi đóng gói
+    // mã nguồn ở trong thư mục public thì nó sẽ hiển thị logo.png theo kiểu nào
+    options: {
+      // name: "[name].[ext]?[hash]"
+      name: function(file) {
+        return "assets/images/[hash].[ext]?[hash]";
+      }
+    }
+  }
+
+Tìm hiểu Component và cách tạo trong Vue
+  - Các component được lưu trữ trong đường dẫn src/components/...
+  - Cách tạo component:
+    + Tạo file trong thư mục components
+      ex: CompHeader.vue
+    + Khai báo export default {
+                name:'comp-header',
+                data(){
+                  return{
+                    text: 'Header'
+                  }
+                }
+              }
+
+    + Import và file App.vue: import CompHeader from './components/CompHeader.vue';
+    + Khai báo vào export default đối tượng đó
+      ex: CompHeader
+    + Gọi vào trang web
+      * Cách 1: <CompHeader></CompHeader>
+      * Cách 2: <CompHeader />
+      * Cách 3: <comp-header />
+
+Cài đặt mã nguồn và tổ chức Component lồng nhau

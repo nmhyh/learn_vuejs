@@ -1,0 +1,6 @@
+Vue Instance la gi
+Muốn Vuejs trỏ đến thành muốn sử dụng vuejs thông qua thuộc tính là 'el'
+Data binding (Ràng buộc dữ liệu)
+  Thuộc tính sử dụng v-bind
+  Trong dấu ngoặc {{}} không đc có những biểu thức phức tạp như khai báo biến, if else
+Javascript Expression

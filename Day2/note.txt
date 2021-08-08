@@ -1,0 +1,14 @@
+Sử dụng v on xử lí sự kiện
+Cách sử dụng Event Modifiers
+  preventdefault (ngăn chặn sự kiện mặc định là sự kiện load lại trang)
+  stoppropagation (ngăn chặn sự kiện đó lan tỏa ra phần tử trang)
+Tìm hiểu về 'computed'
+  Khac voi 'methods' la ro rang hong chay ham cung luc
+  Khi co su thay doi nao VueJS se render lai template va khi no gap loi goi ham thi no se chay lai, con 'computed' no dc luu lai o doi tuong Vuejs nen no se chay 1 doi tuong
+  Tinh toan dua tren du lieu
+  'methods' chay cac ham cung luc
+
+Ràng buộc dữ liệu 2 chiều
+  Su dung v-model
+
+Ràng buộc Class bằng VueJs

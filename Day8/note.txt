@@ -1,0 +1,3 @@
+Xây dựng các Component cần thiết, Logic dữ liệu cơ bản
+Chức năng New Game
+Chức năng Roll Dice Phần 01

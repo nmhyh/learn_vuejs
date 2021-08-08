@@ -1,0 +1,14 @@
+Ràng buộc Style cho phần tử
+  Khi co mot danh sach cac style thi tao 1 cai computed cho no gon
+Render Template dùng biểu thức điều kiện
+  - Doi voi bieu thuc dieu kien no se remove luon cau truc DOM
+  - Con doi voi v-show van hien thi trong cau truc DOM nhung bi an bang css 'display: none'
+  - Khi nao su dung 'key'
+    + Doi voi Vuejs no co gang tan dung lai nhung gi minh da dung khi co su thay doi
+    + Khong muon luu lai gia tri cu thi thong bao cho Vuejs bang 'key'
+Render Template dùng vòng lặp trong VueJs
+  ex: v-for="i in items"
+Lưu ý về Loop và Condition trong VueJS
+  - Tao 'computed' de luu tru gia tri chu k dung v-if long vao v-for
+Lưu ý quan trọng về Array và Object trong VueJs
+  ex: app.$set(target, key, val)

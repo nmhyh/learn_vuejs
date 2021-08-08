@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VueJS</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <style>
+    .list-blog {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .list-blog .blog {
+      flex-basis: 21%;
+      margin: 2%;
+      border: 1px solid #000;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 18px;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(value, key) in score">{{ key }}: {{ value }}</li>
+    </ul>
+    <div class="list-blog">
+      <div v-for="(book, index) in listBooks" class="blog" v-bind:key="index">
+        <div class="title">
+          {{ book.name }}
+        </div>
+        <div class="description">
+          Tac gia: {{ book.author }}
+          <br>
+          Nam: {{ book. year }}
+          <br>
+          The loai: {{ book.genre }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>

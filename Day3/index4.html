@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VueJS</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <style>
+    .list-blog {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .list-blog .blog {
+      flex-basis: 21%;
+      margin: 2%;
+      border: 1px solid #000;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 18px;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="user" v-for="user in userActive">{{ user.email }}</div>
+
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>

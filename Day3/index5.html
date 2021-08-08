@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VueJS</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+</head>
+
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(score, key) in objScore">
+        {{ key }} : {{ score }}
+      </li>
+    </ul>
+    <hr>
+    <ul>
+      <li v-for="number in arrNumber">{{ number }}</li>
+    </ul>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>

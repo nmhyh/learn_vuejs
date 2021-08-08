@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VueJS</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h3>FirstName = {{ firstName }}</h3>
+    <!-- <input v-on:keyup="handleKeyUp" type="text" placeholder="Nhap firstName"> -->
+    <input v-model="firstName" type="text" placeholder="Nhap firstName">
+    <p>{{ about }}</p>
+    <textarea v-model="about" cols="30" rows="10"></textarea>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>

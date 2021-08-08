@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue Mastery</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="nav-bar">
+      <div class="cart">Giỏ hàng({{ cart }})</div>
+      <div class="product-display">
+        <div class="product-container">
+          <div class="product-image">
+            <img v-bind:src="getProduct.image" alt="" srcset="">
+          </div>
+          <div class="product-info">
+            <h3>
+              <a v-bind:href="url" v-bind:target="target">{{ title }}</a>
+            </h3>
+            <p v-if="getProduct.quantity > 0">Còn lại: {{ getProduct.quantity }} sản phẩm</p>
+            <p v-else-if="getProduct.quantity <= 0">Sản phẩm đã hết hàng</p>
+            <p class="price-final">{{ formatFinalPrice }}</p>
+            <p class="price-orinal">{{ formatOrinalPrice }} <small>{{ '-' + sale * 100 + "%" }}</small></p>
+            <div class="list-color">
+              <div>
+                Màu sắc: {{ getProduct.textColor }}
+              </div>
+              <div class="color">
+                <ul class="pro-color">
+                  <li v-for="(item, index) in listProductDetail">
+                    <img class="img-pro" v-bind:class="classActive(index)" v-bind:src="item.image" v-bind:key="index"
+                      v-bind:alt="item.textColor" v-on:click="handleClickColor(index)">
+                  </li>
+                </ul>
+              </div>
+              <button class="button" v-on:click="handleAddTocart">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="desc">
+        <h3>Mô tả</h3>
+        <ul v-html="desc">
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>
